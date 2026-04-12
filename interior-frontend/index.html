@@ -720,6 +720,7 @@ async function submitForm() {
     try {
         const res = await fetch('https://interior-svi-backend.onrender.com/submit', {  
             method: 'POST',
+            mode: 'cors',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, phone, whatsapp })
         });
@@ -734,7 +735,7 @@ async function submitForm() {
         }
 
     } catch (err) {
-        alert('Cannot connect to server. Make sure Flask is running on Render!');
+        alert('Server is waking up... please try again in 5 seconds');
     } finally {
         btn.classList.remove('loading');
     }
