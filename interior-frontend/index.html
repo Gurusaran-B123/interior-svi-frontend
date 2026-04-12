@@ -26,7 +26,7 @@
             --dark: #2f2f2f;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box;  }
         html { scroll-behavior: smooth; }
         body { background: var(--light); color: var(--dark);  overflow-x: hidden;}
 
@@ -46,42 +46,37 @@
             text-shadow: -1px -1px 0 gray, 1px -1px 0 rgb(211,161,161), -1px 1px 0 gray, 1px 1px 0 rgb(252,226,201);
         }
 
-        nav ul { display: flex; list-style: none; gap: 20px; flex-wrap: wrap; }
+        nav ul { display: flex; list-style: none; gap: 20px; flex-wrap: wrap; font-family: "Squada One", sans-serif; }
 
         nav a {
             text-decoration: none; color: var(--dark); font-weight: 500;
-            font-size: clamp(0.8rem, 2.5vw, 1.5rem); transition: 0.3s;font-family: fantasy;
+            font-size: clamp(0.8rem, 2.5vw, 1.5rem); transition: 0.3s;
             
         }
         nav a:hover { box-shadow: none;color: #9C7B60; }
 
-        .hero {
-            height: 100vh; display: flex; justify-content: center; align-items: center;
+        .hero { min-height: 100vh;
+               height: auto;
+             display: flex; justify-content: center; align-items: center;
             text-align: center; padding: 20px; color: white;
-            background-color: #6b4f3b;
+              background: linear-gradient(to right,#c8a97e ,#6b4f3b);
             
             background-repeat: no-repeat; background-size: 100% 100vh;
             border-radius: 10px;
         }
 
-        .hero h2 { font-size: clamp(1.6rem, 5vw, 3rem);font-family: fantasy;
+        .hero h2 { font-size: clamp(1.6rem, 5vw, 3rem);
              margin-bottom: 35px;
-             padding-top: 80px;animation-name: change;animation-duration: 2s;}
+             padding-top: 80px;  font-family: "Boldonse", system-ui;}
 
-         @keyframes change{from{transform: translateY(-300px);}
-        to {transform: translateY(0px)}}    
-
+        
         .hero p  { max-width: 600px; margin: 0 auto 30px; padding-top: 5px;
                    font-size: clamp(0.9rem, 2.5vw, 1.5rem); color: rgb(255,211,167);
                    text-shadow: 5px 3px 2px rgba(0,0,0,0.5);
-                animation-name:para;animation-duration: 2s;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              
              }
-
-                @keyframes para{from{transform: translateX(650px);}
-        to {transform: translateX(0px)}}
         
-
-        .hero span { color: yellow;font-family: fantasy;
+        .hero span { color: yellow; font-family: "Boldonse", system-ui;
         }
 
 
@@ -100,16 +95,11 @@
       
     flex: 1;
     min-width: 250px;
-    animation-name: text;
-    animation-duration: 2s;
+    
 }
 
 
 
-@keyframes text {
-    from { opacity: 0; transform: translateY(100px); }
-    to   { opacity: 1; transform: translateY(0);    }
-}
 
    
 
@@ -118,38 +108,31 @@
 
 
         .about-text h2 {
-            color: var(--primary); font-size: clamp(1.4rem, 4vw, 2.2rem);
+            color:black; font-size: clamp(1.4rem, 4vw, 2.2rem);
             margin-bottom: 10px; letter-spacing: 4px; text-transform: uppercase;
         }
 
         .services { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
 
         .service-card {
-            background:  burlywood; padding: 30px; flex: 1 1 220px;color: white;
-            border-radius: 10px; transition: 0.4s; text-align: center; border:1px solid white;
-            box-shadow: 0px 0px 20px 5px gray;
-               animation-name:img;
-        animation-duration: 5s;
-    animation-iteration-count: infinite;
+            background:  burlywood; padding: 30px; flex: 1 1 220px;color: white;font-family: 'Poppins', sans-serif;
+            border-radius: 10px;text-align: center; border:1px solid white; 
+           
         }
 
-        @keyframes img{
-from{border: 1px solid white;}
-to{border: 1px solid black;}
-}
+
         .ser{
-            background-color:  #bcc7f0;
+            background-color:cyan;
         }
 
         .service-card h3{
-            color: black;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:var(--dark); font-family: "Boldonse", system-ui;
         }
-        .service-card:hover {  box-shadow: 0 10px 25px rgba(0,0,0,0.1);transform: scale(1.1); }
-
+   
         #gallery { background: #6b4f3b; text-align: center; }
-        #gallery h2 {font-family: fantasy;
+        #gallery h2 {
             color: yellow; font-size: clamp(1.4rem, 4vw, 2.2rem);
-            margin-bottom: 10px; letter-spacing: 4px; text-transform: uppercase;
+            margin-bottom: 10px; letter-spacing: 4px; text-transform: uppercase; font-family: "Squada One", sans-serif;
         }
 
         p.subtitle { color: peru; font-size: 14px; margin-bottom: 40px; letter-spacing: 2px; }
@@ -176,7 +159,7 @@ to{border: 1px solid black;}
         }
 
         .contact { text-align: center; }
-        .contact h2 { color: var(--primary); margin-bottom: 15px;font-family: fantasy; }
+        .contact h2 { color: var(--primary); margin-bottom: 15px; font-family: "Squada One", sans-serif; }
         .contact p  { margin-bottom: 10px; }
         .contact table { display: flex; text-align: center; justify-content: center; color: #6b4f3b; }
 
@@ -186,10 +169,13 @@ to{border: 1px solid black;}
         @media (max-width: 600px) {
             nav ul { display: none;} 
             nav{display: flex;align-items: center;justify-content:start;}
-         
+             .el h2 span {
+        display: block;
+        margin-top: 20px;}
+
               .hero .el{ margin-top: 60px;}            
             .imgs { width: 220px; height: 280px; }
-            .hero h2 { margin: 0; padding: 0; }
+            .hero h2 {  padding:0px ;margin: 0px; }
             .el { padding-bottom: 150px; }
             section { padding: 80px 4%; }
             header{padding: 10px; height: 50px;  background-color:rgba(245, 245, 245, 0.267);
@@ -212,8 +198,7 @@ to{border: 1px solid black;}
             align-items: center; justify-content: center;
             display: flex; flex-direction: column;
             background-color: #f0ebe8;
-            box-shadow: -5px -5px 10px 3px gray;
-            margin-bottom: 10px; border-radius: 10px;
+            margin-bottom: 10px; border-radius: 20px;
         }
 
         .contact table {
@@ -226,15 +211,15 @@ to{border: 1px solid black;}
 
         .contact h2 {
             color:var(--primary); font-size: 2.2rem;
-            margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase;
+            margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; font-family: "Squada One", sans-serif;
         }
         .about h2{color:var(--primary); font-size: 2.2rem;
-            margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;font-family: fantasy;}
+            margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; font-family: "Squada One", sans-serif;}
 
-        .ser h2 {font-family: fantasy;
+        .ser h2 {
             color: yellow; font-size: 2.2rem;
             margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase;
-            display: flex; justify-content: center; align-items: center;
+            display: flex; justify-content: center; align-items: center; font-family: "Squada One", sans-serif;
         }
 
         .contact a { text-decoration: none; color: #6b4f3b; padding: 5px 50px; }
@@ -262,12 +247,19 @@ to{border: 1px solid black;}
        
       
        .bold{
-        font-size: 1rem;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: 550;
+        font-size: 1rem;
+        font-weight: 550;font-family: 'Poppins', sans-serif;
+        
        }
-    .loc{font-family: cursive;}
 
-    
+       .bold span{
+        color: darkcyan;
+        font-size: 1.3rem;
+        font-weight:bold;
+       }
+    .loc{font-family: 'Poppins', sans-serif;}
+
+    .service-card img{height:200px; width:250px;}
        
        
 
@@ -332,7 +324,7 @@ to{border: 1px solid black;}
             border: 1.5px solid #E8DDD4; border-radius: 7px;
             font-size: 0.92rem; color: #2C1A0E; background: #FAF6F0;
             outline: none; transition: border-color 0.2s, box-shadow 0.2s;
-            font-family: 'Segoe UI', sans-serif;
+           
         }
         .form-group input:focus {
             border-color: #6b4f3b; background: #fff;
@@ -348,7 +340,7 @@ to{border: 1px solid black;}
             width: 100%; padding: 0.85rem; background: #5C3D1E; color: #fff;
             border: none; border-radius: 7px; font-size: 0.95rem; font-weight: 600;
             cursor: pointer; transition: background 0.2s, transform 0.15s;
-            margin-top: 0.3rem; letter-spacing: 0.4px; font-family: 'Segoe UI', sans-serif;
+            margin-top: 0.3rem; letter-spacing: 0.4px;
         }
         .submit-btn:hover { background: #8B5E3C; transform: translateY(-1px); }
         .submit-btn:active { transform: translateY(0); }
@@ -399,16 +391,29 @@ to{border: 1px solid black;}
             background: #5C3D1E; color: #fff; border: none;
             padding: 0.75rem 2.5rem; border-radius: 7px;
             font-size: 0.95rem; cursor: pointer; transition: background 0.2s;
-            font-family: 'Segoe UI', sans-serif;
+           
         }
         .ty-box .done-btn:hover { background: #8B5E3C; }
     </style>
     <meta name="google-site-verification" content="N54zh1x8vZkWXPfxUQeJjKhZxlEJ56e9rB3T3xxi90c" />
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+     
+ <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <nav>
+    <nav data-aos="fadeIn" data-aos-delay="500">
         <h1>Sri VekkaliyammaN</h1>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -421,55 +426,88 @@ to{border: 1px solid black;}
 </header>
 
 <!-- HERO -->
-<section class="hero" id="home">
-    <div class="el">
-        <h2>Elegant Interiors &<span> Custom Wood Works</span></h2>
-        <p>We create luxurious, modern and handcrafted wooden interiors that transform your home into a masterpiece.</p>
-        <button class="btn" onclick="openModal('Get Free Consultation')">Get Free Consultation</button>
+ 
+<section class="hero" id="home"  >
+    <div class="el" >
+        <h2 data-aos="fade-down">Elegant Interiors<span>&  Custom Wood Works</span></h2>
+        <p data-aos="fade-right" data-aos-delay="600">We create luxurious, modern and handcrafted wooden interiors that transform your home into a masterpiece.</p>
+        <button class="btn"data-aos="fade-left" onclick="openModal('Get Free Consultation')">Get Free Consultation</button>
     </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about">
-   <img src="static/about.png" alt="Interior Design " style="height: 300px;width: 300px;">
-    <div class="about-text">
-        <h2 class="abt">About Us</h2>
-        <p class="bold">"Sri Vekkaliyamman Interiors is a Trichy-based interior design and custom woodwork company. We create beautiful kitchens, wardrobes, pooja rooms, furniture and complete home interiors — designed for your lifestyle, built for a lifetime."</p>
+<section id="about" class="about" >
+   <img src="static/about.png" alt="Interior Design " style="height: 300px;width: 300px;" data-aos="fade-right">
+    <div class="about-text" data-aos="fade-left"data-aos-delay="700">
+        <h2 class="abt" data-aos="slide-up">About Us</h2>
+        <p class="bold"><span>S</span>ri Vekkaliyamman Interiors is a Trichy-based interior design and custom woodwork company. We create beautiful kitchens, wardrobes, pooja rooms, furniture and complete home interiors — designed for your lifestyle, built for a lifetime.<br><br>
+
+      <span>W</span>hat makes us different is the personal attention we give to every project. We don’t just design spaces — we listen to your ideas, understand your needs, and bring them to life with care and precision. Every detail matters to us, from the smallest finish to the overall look of your home.<br><br>
+
+<span>W</span>ith over 15 years of experience in interior design and woodwork, we have built a strong reputation for quality and reliability. Our work combines traditional craftsmanship with modern design, ensuring that every piece we create is both stylish and long-lasting.<br><br>
+
+<span>O</span>ur goal is simple — to make your home more comfortable, beautiful, and meaningful. Whether it’s a small change or a complete interior transformation, we are committed to delivering results that you and your family will love for years to come.<br><br></p>
     </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="ser">
-    <h2>Our Services</h2>
+    <h2 data-aos="slide-up">Our Services</h2>
    <div class="services">
-    <div class="service-card"><img src="static/intdes.png" alt="work 1" style="height:200px; width:250px;"><h3>Interior Design</h3><p>Modern and aesthetic interior solutions tailored to your lifestyle.</p></div>
-    <div class="service-card"><img src="static/cus.jpg" alt="work 2" style="height:200px; width:250px;"><h3>Custom Furniture</h3><p>Handcrafted wooden furniture with premium finishing.</p></div>
-    <div class="service-card"><img src="static/pexels-houzlook-7515855.jpg" alt="work 3" style="height:200px; width:250px;"><h3>Modular Kitchens</h3><p>Smart storage solutions with elegant wooden design.</p></div>
-    <div class="service-card"><img src="static/pooja.avif" alt="work 4" style="height:200px; width:250px;"><h3>Pooja Room</h3><p>We design divine and peaceful Pooja Rooms with intricate wood carvings.</p></div>
-    <div class="service-card"><img src="static/wat.jpg" alt="work 5" style="height:200px; width:250px;"><h3>Cupboard & Wardrobe</h3><p>Custom cupboards built for smart storage with stylish designs.</p></div>
-    <div class="service-card"><img src="static/door.jpg" alt="work 6" style="height:200px; width:250px;"><h3>Door Fitting & Frames</h3><p>Solid wood and flush door fitting with precision frames.</p></div>
-    <div class="service-card"><img src="static/staircase.jpg" alt="work 7" style="height:200px; width:250px;"><h3>Staircase</h3><p>Handcrafted wooden staircases designed to be your home's showpiece.</p></div>
-    <div class="service-card"><img src="static/show.jpg" alt="work 8" style="height:200px; width:250px;"><h3>Showcase & Display Units</h3><p>Display your memories and collections in style.</p></div>
-    <div class="service-card"><img src="static/window_org.jpg" alt="work 9" style="height:200px; width:250px;"><h3>Wood Windows</h3><p>Solid wood windows crafted for strength, beauty, and ventilation.</p></div>
-    <div class="service-card"><img src="static/other.png" alt="work 10" style="height:200px; width:250px;"><h3>Plywood & Other Wood Works</h3><p>TV units, false ceilings, partition panels, loft works and more.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="100"><img src="static/intdes.png" alt="work 1"><h3>Interior Design</h3><p>Modern and aesthetic interior solutions tailored to your lifestyle.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="200"><img src="static/cus.jpg" alt="work 2"><h3>Custom Furniture</h3><p>Handcrafted wooden furniture with premium finishing.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="300"><img src="static/pexels-houzlook-7515855.jpg" alt="work 3" ><h3>Modular Kitchens</h3><p>Smart storage solutions with elegant wooden design.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="400"><img src="static/pooja.avif" alt="work 4"><h3>Pooja Room</h3><p>We design divine and peaceful Pooja Rooms with intricate wood carvings.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="500"><img src="static/wat.jpg" alt="work 5" ><h3>Cupboard & Wardrobe</h3><p>Custom cupboards built for smart storage with stylish designs.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="600"><img src="static/door.jpg" alt="work 6"><h3>Door Fitting & Frames</h3><p>Solid wood and flush door fitting with precision frames.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="700"><img src="static/staircase.jpg" alt="work 7"><h3>Staircase</h3><p>Handcrafted wooden staircases designed to be your home's showpiece.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="800"><img src="static/show.jpg" alt="work 8" ><h3>Showcase & Display Units</h3><p>Display your memories and collections in style.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="900"><img src="static/window_org.jpg" alt="work 9" ><h3>Wood Windows</h3><p>Solid wood windows crafted for strength, beauty, and ventilation.</p></div>
+    <div class="service-card"data-aos="zoom-in" data-aos-delay="1000"><img src="static/other.png" alt="work 10" ><h3>Plywood & Other Wood Works</h3><p>TV units, false ceilings, partition panels, loft works and more.</p></div>
 </div>
 </section>
     
 <!-- GALLERY -->
 <section id="gallery">
-    <h2>Our Works</h2>
+    <h2 data-aos="slide-up">Our Works</h2>
     <p class="subtitle">— crafted with passion —</p>
 
     <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
   <div class="carousel-inner ">
     <div class="carousel-item active">
-      <img src="static/pexels-houzlook-7515855.jpg" class="d-block w-100" alt="our works img1"   style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: cover;">
+      <img src="static/mk2.jpeg" class="d-block w-100" alt="our works img1"   style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
     </div>
     <div class="carousel-item">
-            <img src="static/pexels-houzlook-7515855.jpg" class="d-block w-100" alt="our works img2" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: cover;">
+            <img src="static/mk1.jpeg" class="d-block w-100" alt="our works img2" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
     </div>
     <div class="carousel-item">
-          <img src="static/pexels-houzlook-7515855.jpg" class="d-block w-100" alt="our works img3" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: cover;">
+          <img src="static/mk3.jpeg" class="d-block w-100" alt="our works img3" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
+    </div>
+
+    <div class="carousel-item">
+          <img src="static/wt.jpeg" class="d-block w-100" alt="our works img4" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
+    </div>
+
+    <div class="carousel-item">
+          <img src="static/rc6.jpeg" class="d-block w-100" alt="our works img5" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
+    </div>
+
+    <div class="carousel-item">
+          <img src="static/rc1.jpeg" class="d-block w-100" alt="our works img6" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
+    </div>
+
+    <div class="carousel-item">
+          <img src="static/rc2.jpeg" class="d-block w-100" alt="our works img7" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
+    </div>
+
+    <div class="carousel-item">
+          <img src="static/rc7.jpeg" class="d-block w-100" alt="our works img8" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
+    </div>
+    <div class="carousel-item">
+          <img src="static/rc5.jpeg" class="d-block w-100" alt="our works img9" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
+    </div>
+    <div class="carousel-item">
+          <img src="static/rc4.jpeg" class="d-block w-100" alt="our works img10" style="border: 3px solid gold;border-radius: 15px;height: 75vw; max-height: 560px; width: 100%; object-fit: contain;">
     </div>
   </div>
 
@@ -486,15 +524,15 @@ to{border: 1px solid black;}
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-    <h2>Contact Us</h2>
+    <h2 data-aos="slide-up">Contact Us</h2>
     <div class="box">
         <h3>S. Sathiyakeerthi DME</h3>
         <p>Interior Designer</p>
      
         <div class="mysel">
-        <img src="static/sakthi.jpeg" alt="sakthi img" class="sakthi">
+        <img src="static/sakthi.jpeg" alt="sakthi img" class="sakthi" data-aos="fade-right"data-aos-delay="500" >
          
-         <p class="loc">" Hi,I'm Sathiyakeerthi, founder of this company. With over 15years of <br>
+         <p class="loc"  data-aos="fade-down" data-aos-delay="600" >" Hi,I'm Sathiyakeerthi, founder of this company. With over 15years of <br>
             hands-on experience in interior design and custom<br>
              wood works, I personally oversee every project<br>
               from first sketch to final finish."
@@ -502,7 +540,7 @@ to{border: 1px solid black;}
         </div>
          
   
-    <table border="0" cellspacing="20">
+    <table border="0" cellspacing="20" data-aos="fade-left">
                   
         <tbody>
             <tr>
@@ -517,7 +555,7 @@ to{border: 1px solid black;}
 </section>
 
 <footer>
-    <p>© 2026 sri vekkaliyamman Interiors | All Rights Reserved</p>
+    <p data-aos="slide-up">© 2026 sri vekkaliyamman Interiors | All Rights Reserved</p>
 </footer>
 
 
@@ -728,6 +766,14 @@ phoneInput.addEventListener('input', function () {
     
     
 
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration:800,
+    offset: 80,
+    once: true
+  });
 </script>
 
 </body>
