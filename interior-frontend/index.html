@@ -718,7 +718,7 @@ async function submitForm() {
     btn.classList.add('loading');
 
     try {
-        const res = await fetch('https://vekkaliyamman-interiors.onrender.com/submit', {  
+        const res = await fetch('https://interior-svi-backend.onrender.com/submit', {  
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, phone, whatsapp })
