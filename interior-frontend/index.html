@@ -294,8 +294,54 @@
                 overflow-x: hidden;
             }
 
-            nav ul {visibility: hidden;} 
-            nav{display: flex;align-items: center;justify-content:start;}
+            .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+       top: 50%;
+    transform: translateY(-50%);
+    margin-top: 15px;
+    
+      
+    }
+
+    nav {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        position: absolute;
+        top:0px;
+        right:0px;
+          backdrop-filter: blur(10px);
+        flex-direction: column;
+        width:120px;
+        max-width: 200px;
+        padding:5px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      
+        display: none; 
+    }
+
+    
+
+    nav ul.show {
+        display: flex;
+     
+    }
+
+    nav ul li {
+        padding:2px 0;
+        text-align: center;
+    }
+   
+
+    i{color: white;font-size:25px;}
+
+
              .el h2 span {
                 display: block;
                 margin-top: 20px;
@@ -377,7 +423,146 @@
             }
         }
 
+        /* ============================= */
+/* TABLET VIEW (max-width:1024px) */
+/* ============================= */
+@media (max-width: 1024px) {
+
+  .menu-toggle{display: none;}
+ 
+ 
+  
+    .hero {
+        padding: 40px 20px;
+        background-size: cover;
+    }
+
+    .hero .el {
+        padding-top: 100px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        max-width: 80%;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .services {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .service-card {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .mysel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sakthi {
+        margin: 0 auto 15px;
+    }
+
+    .loc {
+        font-size: 14px;
+    }
+
+    #gallery img {
+        height: 60vw !important;
+    }
+
+}
+
+.menu-toggle {
+    display: none;
+}
+nav ul {
+    display: flex;
+}
+/* ============================= */
+/* SMALL TABLET (max-width:768px) */
+/* ============================= */
+@media (max-width: 768px) {
+ .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top:0px;
+    }
+
+    nav {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+     i{color:var(--primary);font-size:30px;}
+
+    nav ul {
+        position: absolute;
+        top: 60px;
+        left:0px;
+          backdrop-filter: blur(10px);
+        flex-direction: column;
+          width: 100%;            
+        max-width:100%;      
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      
+        display: none; 
+    }
+
+    
+
+    nav ul.show {
+        display: flex;
+     
+    }
+
+    nav ul li {
+        padding: 5px 0;
+        text-align: center;
+    }
+    nav a{
+        font-size:1.6rem;
+    }
+
+
+    .service-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .about img {
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    #gallery img {
+        height: 70vw !important;
+    }
+
+}
+     
+
+
         .contact p { padding-left: 0px; }
+        
 
         .contact .box {
             align-items: center; 
@@ -749,6 +934,9 @@
 <header>
     <nav data-aos="fadeIn" data-aos-delay="500">
         <h1>Sri VekkaliyammaN</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="bi bi-list"></i>
+</div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -789,15 +977,15 @@
     <h2 data-aos="slide-up">Our Services</h2>
    <div class="services">
     <div class="service-card" data-aos="zoom-in" data-aos-delay="100"><img src="static/intdes.png" alt="work 1"><h3>Interior Design</h3><p>Modern and aesthetic interior solutions tailored to your lifestyle.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="200"><img src="static/cus.jpg" alt="work 2"><h3>Custom Furniture</h3><p>Handcrafted wooden furniture with premium finishing.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="300"><img src="static/pexels-houzlook-7515855.jpg" alt="work 3"><h3>Modular Kitchens</h3><p>Smart storage solutions with elegant wooden design.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="400"><img src="static/pooja.avif" alt="work 4"><h3>Pooja Room</h3><p>We design divine and peaceful Pooja Rooms with intricate wood carvings.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="500"><img src="static/wat.jpg" alt="work 5"><h3>Cupboard & Wardrobe</h3><p>Custom cupboards built for smart storage with stylish designs.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="600"><img src="static/door.jpg" alt="work 6"><h3>Door Fitting & Frames</h3><p>Solid wood and flush door fitting with precision frames.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="700"><img src="static/staircase.jpg" alt="work 7"><h3>Staircase</h3><p>Handcrafted wooden staircases designed to be your home's showpiece.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="800"><img src="static/show.jpg" alt="work 8"><h3>Showcase & Display Units</h3><p>Display your memories and collections in style.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="900"><img src="static/window_org.jpg" alt="work 9"><h3>Wood Windows</h3><p>Solid wood windows crafted for strength, beauty, and ventilation.</p></div>
-    <div class="service-card" data-aos="zoom-in" data-aos-delay="1000"><img src="static/other.png" alt="work 10"><h3>Plywood & Other Wood Works</h3><p>TV units, false ceilings, partition panels, loft works and more.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="150"><img src="static/cus.jpg" alt="work 2"><h3>Custom Furniture</h3><p>Handcrafted wooden furniture with premium finishing.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="200"><img src="static/pexels-houzlook-7515855.jpg" alt="work 3"><h3>Modular Kitchens</h3><p>Smart storage solutions with elegant wooden design.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="250"><img src="static/pooja.avif" alt="work 4"><h3>Pooja Room</h3><p>We design divine and peaceful Pooja Rooms with intricate wood carvings.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="300"><img src="static/wat.jpg" alt="work 5"><h3>Cupboard & Wardrobe</h3><p>Custom cupboards built for smart storage with stylish designs.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="350"><img src="static/door.jpg" alt="work 6"><h3>Door Fitting & Frames</h3><p>Solid wood and flush door fitting with precision frames.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="400"><img src="static/staircase.jpg" alt="work 7"><h3>Staircase</h3><p>Handcrafted wooden staircases designed to be your home's showpiece.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="450"><img src="static/show.jpg" alt="work 8"><h3>Showcase & Display Units</h3><p>Display your memories and collections in style.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="500"><img src="static/window_org.jpg" alt="work 9"><h3>Wood Windows</h3><p>Solid wood windows crafted for strength, beauty, and ventilation.</p></div>
+    <div class="service-card" data-aos="zoom-in" data-aos-delay="550"><img src="static/other.png" alt="work 10"><h3>Plywood & Other Wood Works</h3><p>TV units, false ceilings, partition panels, loft works and more.</p></div>
 </div>
 </section>
     
@@ -1097,7 +1285,14 @@ phoneInput.addEventListener('input', function () {
     }
 });
 
-     
+ function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("show");
+}
+document.querySelectorAll("nav ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelector("nav ul").classList.remove("show");
+    });
+});    
     
     
 
