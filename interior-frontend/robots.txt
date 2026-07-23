@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sri-vekkaliamman-interiorandwoodworks.mr-gurusaran123.workers.dev/sitemap.xml
